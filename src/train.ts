@@ -1,4 +1,27 @@
-// M-TASK
+//TASK-N
+
+function palindromCheck (a:string) {
+    if (a.split("").reverse().join("") == a) {
+        console.log(true)
+    }
+    else {
+        console.log(false)
+    }
+}
+
+
+palindromCheck("dad");
+palindromCheck("laptop");
+
+
+
+
+
+
+
+
+
+/* // M-TASK
 function getSquareNumbers(numbers: number[]) {
     for (let number of numbers) {
         const result = {
@@ -10,4 +33,4 @@ function getSquareNumbers(numbers: number[]) {
     }
 }
 
-getSquareNumbers([45,5,6]);
+getSquareNumbers([45,5,6]); */
