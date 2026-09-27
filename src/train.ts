@@ -1,6 +1,36 @@
+
+function calculateSumOfNumbers(arr: any[]) :void {
+  let sum: number = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    
+    if (typeof arr[i] === "number") {
+      sum += arr[i];
+    }
+  }
+
+  console.log(sum);
+}
+
+
+
+calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]);
+
+
+
+
+
+
+
+
+
+
+
+
+
 //TASK-N
 
-function palindromCheck (a:string) {
+/* function palindromCheck (a:string) {
     if (a.split("").reverse().join("") == a) {
         console.log(true)
     }
@@ -12,7 +42,7 @@ function palindromCheck (a:string) {
 
 palindromCheck("dad");
 palindromCheck("laptop");
-
+ */
 
 
 
@@ -34,3 +64,25 @@ function getSquareNumbers(numbers: number[]) {
 }
 
 getSquareNumbers([45,5,6]); */
+
+
+
+
+/*
+  Project Standards
+  - Logging standards
+  - Naming standards:
+      function, method, variable => CAMEL
+      class => PASCAL
+     folder, file => KEBAB
+      css => SNAKE
+  - Error handling
+ */
+
+
+/*
+  Traditional Api
+  Rest Api
+  GraphQL Api
+  ...
+ */
