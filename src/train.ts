@@ -1,5 +1,20 @@
+//TASK-P
 
-function calculateSumOfNumbers(arr: any[]) :void {
+function objectToArray (obj: object) {
+
+    console.log(Object.entries(obj))
+   // const k = a.keys():String;
+}
+
+
+
+
+
+objectToArray({a: 10, b: 20,c:21})// return [["a", 10], ["b", 20]]
+
+
+//TASK-O
+/* function calculateSumOfNumbers(arr: any[]) :void {
   let sum: number = 0;
 
   for (let i = 0; i < arr.length; i++) {
@@ -17,7 +32,7 @@ function calculateSumOfNumbers(arr: any[]) :void {
 calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]);
 
 
-
+ */
 
 
 
