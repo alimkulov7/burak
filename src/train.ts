@@ -1,8 +1,29 @@
+
+function hasProperty(a:object) {
+    for (const ele of Object.values(a)) {
+        if (typeof ele == "string") {
+            console.log(true);
+        }else{
+            console.log(false);
+        }
+    }
+}
+
+
+
+
+hasProperty({name: "BMW"});   //return true
+hasProperty({age: 22});
+
+
+
+
+
 //TASK-P
 
-function objectToArray (obj: object) {
+/* function objectToArray (obj: object) {
 
-    console.log(Object.entries(obj))
+    console.log(Object.entries(obj))   // ==> used to creat a nested array
    // const k = a.keys():String;
 }
 
@@ -11,7 +32,7 @@ function objectToArray (obj: object) {
 
 
 objectToArray({a: 10, b: 20,c:21})// return [["a", 10], ["b", 20]]
-
+ */
 
 //TASK-O
 /* function calculateSumOfNumbers(arr: any[]) :void {
@@ -101,3 +122,8 @@ getSquareNumbers([45,5,6]); */
   GraphQL Api
   ...
  */
+
+  /*
+  Traditional td => SSR => EJS
+  Modern fd => SPA => REACT  
+   */
