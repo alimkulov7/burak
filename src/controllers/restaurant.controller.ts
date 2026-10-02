@@ -10,29 +10,31 @@ const restaurantController: T = {}
 restaurantController.goHome = (req:Request, res:Response) => {
     try {
         console.log("goHome")
-        res.end("Home Page");
+        res.render("home");
     } catch (err) {
         console.log("Error, goHome: ", err);
+    }
+}
+
+restaurantController.getSignup = (req:Request, res:Response) => {
+    try {
+        console.log("getSignup");
+        res.render("signup");
+    } catch (err) {
+        console.log("Error, getSignup: ", err);
     }
 }
 
 restaurantController.getLogin = (req:Request, res:Response) => {
     try {
         console.log("getLogin")
-        res.end("Login Page");
+        res.render("login");
     } catch (err) {
         console.log("Error, getLogin: ", err);
     }
 }
 
-restaurantController.getSignup = (req:Request, res:Response) => {
-    try {
-        console.log("getSignup")
-        res.end("Signup Page");
-    } catch (err) {
-        console.log("Error, getSignup: ", err);
-    }
-}
+
 
 restaurantController.processSignup = async (req:Request, res:Response) => {
     try {
