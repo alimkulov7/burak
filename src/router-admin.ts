@@ -10,7 +10,7 @@ routerAdmin
 .post("/login", restaurantController.processLogin);
 
 routerAdmin
-.get("/signup", restaurantController.getSignup)
+.get("/logout", restaurantController.logout)
 .post("/signup", restaurantController.processSignup);
 
 routerAdmin.get("/check-me",restaurantController.checkAuthSession);
