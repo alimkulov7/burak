@@ -58,14 +58,11 @@ restaurantController.processSignup = async (
         // SESSION
         req.session.member = result;
 
-        req.session.save((err) => {
-            if (err) {
-                console.log("Session save error:", err);
-                return res.send(err);
-            }
+         req.session.save( function() {
+            res.send(result);
 
-            return res.send(result);
         });
+        
     } catch (err) {
         console.log("Error, processSignup: ", err);
 
@@ -74,7 +71,7 @@ restaurantController.processSignup = async (
                 ? err.message
                 : Message.SOMETHING_WENT_WRONG;
 
-        return res.send(`
+        res.send(`
             <script>
                 alert("${message}");
                 window.location.replace("/admin/signup");
@@ -98,13 +95,9 @@ restaurantController.processLogin = async (
         // SESSION
         req.session.member = result;
 
-        req.session.save((err) => {
-            if (err) {
-                console.log("Session save error:", err);
-                return res.send(err);
-            }
+        req.session.save( function() {
+            res.send(result);
 
-            return res.send(result);
         });
     } catch (err) {
         console.log("Error, processLogin: ", err);
@@ -114,7 +107,7 @@ restaurantController.processLogin = async (
                 ? err.message
                 : Message.SOMETHING_WENT_WRONG;
 
-        return res.send(`
+        res.send(`
             <script>
                 alert("${message}");
                 window.location.replace("/admin/login");
@@ -130,17 +123,12 @@ restaurantController.logout = async (
     try {
         console.log("logout");
 
-        req.session.destroy((err) => {
-            if (err) {
-                console.log("Session destroy error:", err);
-                return res.redirect("/admin");
-            }
-
-            return res.redirect("/admin");
+        req.session.destroy(function () {
+            res.redirect("/admin");
         });
     } catch (err) {
         console.log("Error, logout:", err);
-        return res.redirect("/admin");
+        res.redirect("/admin");
     }
 };
 
@@ -151,22 +139,23 @@ restaurantController.checkAuthSession = async (
     try {
         console.log("checkAuthSession");
 
-        if (req.session?.member) {
-            return res.send(`
+        if (req.session?.member) 
+            res.send(`
                 <script>
                     alert("${req.session.member.memberNick}");
                 </script>
             `);
-        }
-
-        return res.send(`
-            <script>
-                alert("${Message.NOT_AUTHENTICATED}");
-            </script>
-        `);
+        
+        else
+             res.send(`
+                 <script>
+                     alert("${Message.NOT_AUTHENTICATED}");
+                 </script>
+                `);
+        
     } catch (err) {
         console.log("Error, checkAuthSession:", err);
-        return res.send(err);
+        res.send(err);
     }
 };
 
