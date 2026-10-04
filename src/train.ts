@@ -1,6 +1,23 @@
 
-function hasProperty(a:object) {
-    for (const ele of Object.values(a)) {
+
+// TASK-R
+
+
+
+function calculate(expression: string): number {
+  const [a, b] = expression.split("+").map(Number);
+
+  return a + b;
+}
+
+console.log(calculate("1 + 3"));
+console.log(calculate("4 + 7"));
+
+
+//TASK-Q
+
+/* function hasProperty(a:object) {
+    for (const ele of Object.keys(a)) {
         if (typeof ele == "string") {
             console.log(true);
         }else{
@@ -15,7 +32,7 @@ function hasProperty(a:object) {
 hasProperty({name: "BMW"});   //return true
 hasProperty({age: 22});
 
-
+ */
 
 
 
