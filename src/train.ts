@@ -137,25 +137,28 @@ getSquareNumbers([45,5,6]); */
 
 
 /*
-  Project Standards
-  - Logging standards
-  - Naming standards:
-      function, method, variable => CAMEL
-      class => PASCAL
-     folder, file => KEBAB
-      css => SNAKE
-  - Error handling
- */
-
+Request:
+    Traditional Api
+    Rest Api
+    GraphQL Api
+    ...
+*/
 
 /*
-  Traditional Api
-  Rest Api
-  GraphQL Api
-  ...
- */
+Frontend Development:
+    Traditional FD     => SSR => EJS
+    Modern FD          => SPA => REACT
+*/
 
-  /*
-  Traditional td => SSR => EJS
-  Modern fd => SPA => REACT  
-   */
+/*
+Cookies:
+    request join
+    self destroy
+*/
+
+/*
+Validation:
+    Frontend validation
+    Backend validation
+    Database validation
+*/
