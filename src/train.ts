@@ -1,9 +1,24 @@
+//TASK-S
+const arr1: number[] = [];
+
+
+
+function missingNumber(arr: number[]): void {
+    for (let i = 1; i <= arr.length + 1; i++) {
+        arr1.push(i);
+    }
+    
+    const result = arr1.filter(num => !arr.includes(num));
+    console.log(result)
+}
+
+missingNumber([1, 2, 4, 5]);
 
 
 // TASK-R
 
 
-
+/* 
 function calculate(expression: string): number {
   const [a, b] = expression.split("+").map(Number);
 
@@ -12,7 +27,7 @@ function calculate(expression: string): number {
 
 console.log(calculate("1 + 3"));
 console.log(calculate("4 + 7"));
-
+ */
 
 //TASK-Q
 
