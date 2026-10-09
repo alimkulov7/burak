@@ -9,7 +9,7 @@ function missingNumber(arr: number[]): void {
     }
     
     const result = arr1.filter(num => !arr.includes(num));
-    console.log(result)
+    console.log(result);
 }
 
 missingNumber([1, 2, 4, 5]);
