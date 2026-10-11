@@ -1,5 +1,17 @@
+//TASK-T
+
+function mergeSortedArrays(a:any[], b :any[]) {
+    const c:any[] = a.concat(b).sort();
+    console.log(c);
+}
+
+
+mergeSortedArrays([0,3,4],[2,5,6]);
+
+
+
 //TASK-S
-const arr1: number[] = [];
+/* const arr1: number[] = [];
 
 
 
@@ -13,7 +25,7 @@ function missingNumber(arr: number[]): void {
 }
 
 missingNumber([1, 2, 4, 5]);
-
+ */
 
 // TASK-R
 
