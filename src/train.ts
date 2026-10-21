@@ -1,5 +1,25 @@
-//TASK-T
+//TASK-V
 
+function countChars(a: string): void {
+  const result: { [key: string]: number } = {};
+
+  for (const ele of a) {
+    if (result[ele] !== undefined) {
+      result[ele] = result[ele] + 1;
+    } else {
+      result[ele] = 1;
+    }
+  }
+  console.log(result);
+}
+
+countChars("hello");
+
+
+// return {h: 1, e: 1, l: 2, o: 1}
+
+//TASK-T
+/* 
 function mergeSortedArrays(a:any[], b :any[]) {
     const c:any[] = a.concat(b).sort();
     console.log(c);
@@ -7,7 +27,7 @@ function mergeSortedArrays(a:any[], b :any[]) {
 
 
 mergeSortedArrays([0,3,4],[2,5,6]);
-
+ */
 
 
 //TASK-S
