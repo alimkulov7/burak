@@ -1,6 +1,21 @@
+//TASK-W
+
+function chunkArray(a: any[], b: number): void {
+    const result: any[] = [];
+    for (let i = 0; i < a.length; i += b) {
+        const ele = a.slice(i, i + b);
+        result.push(ele);
+    }
+
+    console.log(result);
+}
+
+chunkArray([1, 2, 3, 4, 5], 2);
+
+
 //TASK-V
 
-function countChars(a: string): void {
+/* function countChars(a: string): void {
   const result: { [key: string]: number } = {};
 
   for (const ele of a) {
@@ -15,7 +30,7 @@ function countChars(a: string): void {
 
 countChars("hello");
 
-
+ */
 // return {h: 1, e: 1, l: 2, o: 1}
 
 //TASK-T
