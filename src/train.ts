@@ -1,5 +1,25 @@
-//TASK-W
+//TASK-X
+function countOccurrences(obj: any, key: string): number {
+    let count = 0;
 
+    for (let k in obj) {
+        if (k === key) {
+            count++;
+        }
+        if (typeof obj[k] === "object" && obj[k] ) {
+            count = count + countOccurrences(obj[k], key);
+        }
+    }
+
+    return count;
+}
+
+console.log(countOccurrences({ model: "A", s: { model: "B" } }, "model"));
+
+
+
+//TASK-W
+/* 
 function chunkArray(a: any[], b: number): void {
     const result: any[] = [];
     for (let i = 0; i < a.length; i += b) {
@@ -11,7 +31,7 @@ function chunkArray(a: any[], b: number): void {
 }
 
 chunkArray([1, 2, 3, 4, 5], 2);
-
+ */
 
 //TASK-V
 
