@@ -1,5 +1,27 @@
+//TASK-Y
+
+function findIntersection(a: any[], b: any[]): any[] {
+    const result: any[] = [];
+
+    for (const ele of a) {
+        if (b.includes(ele)) {
+            result.push(ele);
+        }
+  }
+
+  return result;
+}
+
+console.log(findIntersection([1, 2, 3], [3, 2, 0]))
+
+
+
+
+
+
+
 //TASK-X
-function countOccurrences(obj: any, key: string): number {
+/* function countOccurrences(obj: any, key: string): number {
     let count = 0;
 
     for (let k in obj) {
@@ -16,7 +38,7 @@ function countOccurrences(obj: any, key: string): number {
 
 console.log(countOccurrences({ model: "A", s: { model: "B" } }, "model"));
 
-
+ */
 
 //TASK-W
 /* 
