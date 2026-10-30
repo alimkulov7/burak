@@ -1,6 +1,22 @@
+//TASK-Z
+
+function sumEvens(arr: number[]): number {
+    let result: number = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            result += arr[i];
+        }
+    }
+
+    return result;
+}
+
+console.log(sumEvens([1, 2, 3, 4, 5]));
+
 //TASK-Y
 
-function findIntersection(a: any[], b: any[]): any[] {
+/* function findIntersection(a: any[], b: any[]): any[] {
     const result: any[] = [];
 
     for (const ele of a) {
@@ -14,7 +30,7 @@ function findIntersection(a: any[], b: any[]): any[] {
 
 console.log(findIntersection([1, 2, 3], [3, 2, 0]))
 
-
+ */
 
 
 
