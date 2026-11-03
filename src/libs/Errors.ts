@@ -10,6 +10,7 @@ export enum HttpCode {
 }
 
 export enum Message {
+  TOKEN_CREATION_FAILED = "Token creation error",
   SOMETHING_WENT_WRONG = "Something went wrong!",
   NO_DATA_FOUND = "No data is found!",
   CREATE_FAILED = "Create is failed!",
