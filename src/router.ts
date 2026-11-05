@@ -3,6 +3,7 @@ const router = express.Router();
 import memberController from "./controllers/member.controller";
 import uploader from "./libs/utilis/uploader"
 /** member **/
+router.get("/member/restaurant", memberController.getRestaurant);
 router.post("/member/login", memberController.login);
 router.post("member/signup", memberController.signup);
 router.post(
@@ -23,7 +24,9 @@ router.post(
 );
 router.get(
     "/member/top-users",
-    memberController.getTopUsers);
+    memberController.getTopUsers
+);
+
 
 /** product **/
 
