@@ -31,6 +31,9 @@ router.get(
 
 /** product **/
 router.get("/product/all/", productController.getProducts);
+router.get("/product/:id", memberController.retriveAuth,
+    productController.getProduct
+);
 /** order **/
 
 
