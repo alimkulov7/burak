@@ -39,3 +39,8 @@ export interface OrderItemInput {
     orderId?: ObjectId;
 }
 
+export interface OrderUpdateInput {
+    orderId: string;
+    orderStatus: OrderStatus;
+}
+
